@@ -4,12 +4,16 @@
 <%= form_for @task do |f| %>
   <%= f.label :title, value: "title" %>
   <%= f.text_field :title %>
+  <br>
   <%= f.label :details, value: "details" %>
   <%= f.text_field :details %>
+  <br>
   <%= f.label :completed, value: "completed" %>
   <%= f.check_box :completed %>
-  <%= f.submit %>
+  <br>
+  <%= f.submit :class => "btn btn-success"%>
 <% end %>
-
+<hr>
+<br>
 
 <p> <%=link_to "Return to tasks", tasks_path%> </p>

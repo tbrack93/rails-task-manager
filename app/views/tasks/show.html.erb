@@ -1,9 +1,11 @@
 <h1> <%= @task.title%> <%=link_to edit_task_path(@task) do%>
-  <button type="submit"><i class="fas fa-pencil-alt"></i>Edit</button>
+  <button class="btn btn-sm btn-primary" type="submit"><i class="fas fa-pencil-alt"></i>Edit</button>
   <%end%></h1>
 
 <h3> <%= @task.details%> </h3>
+<br>
 <input type="checkbox" <%= @task.completed==true ? "checked = true"  : nil%> onclick="return false"; />
 <label for="checkbox"><%=@task.completed==true ? "This task has been completed"  : "This task is still pending"%> </label>
+<hr>
 
 <p><%=link_to "Return to tasks", tasks_path%><p>
